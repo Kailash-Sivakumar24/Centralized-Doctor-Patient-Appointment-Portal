@@ -32,12 +32,26 @@ pip install Flask Flask-Login Flask-SQLAlchemy PyMySQL
 ```
 
 ## Database Setup
-1. Make sure you have MySQL installed and running.
-2. Create a database named `cdpap` (or as configured in `main.py`).
-3. Import the provided `cdpap.sql` file to set up the tables and sample data:
-   ```bash
-   mysql -u root -p cdpasp < cdpap.sql
-   ```
+
+### Local Development
+1. **Install XAMPP**: Download and install XAMPP from [https://www.apachefriends.org/](https://www.apachefriends.org/)
+2. **Start XAMPP Services**:
+   - Open XAMPP Control Panel
+   - Start Apache and MySQL services
+   - Ensure both services show green status
+3. **Access phpMyAdmin**:
+   - Open your web browser
+   - Go to `http://localhost/phpmyadmin`
+4. **Create Database**:
+   - Click on "New" in the left sidebar
+   - Enter database name: `cdpap`
+   - Click "Create"
+5. **Import SQL File**:
+   - Select the newly created `cdpap` database from the left sidebar
+   - Click on the "Import" tab at the top
+   - Click "Choose File" and select the `cdpap.sql` file from your project directory
+   - Click "Go" at the bottom to import the database structure and sample data
+6. **Verify Import**: You should see the tables created successfully in the database
 
 ## How to Run
 1. Ensure all dependencies are installed and the database is set up.
